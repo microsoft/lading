@@ -3412,7 +3412,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-beachball@^1.49.0:
+beachball@1.49.0:
   version "1.49.0"
   resolved "https://registry.yarnpkg.com/beachball/-/beachball-1.49.0.tgz#82095efb6900802fe3a7d06ea6c24de52bb882a2"
   integrity sha512-eAqLYEEuHlKmguMo44VK4jcQxwDWU9+FSDWeyowSwdsfA5VKRBvNo4P5rqD7cdKMmWxEDk/5yeMQIciFbXa5Nw==
@@ -7083,7 +7083,7 @@ kleur@^3.0.2, kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-lage@^0.27.0:
+lage@0.27.0:
   version "0.27.0"
   resolved "https://registry.yarnpkg.com/lage/-/lage-0.27.0.tgz#e050c5cbb3d7e67707bbc4c7512954b9673f0d3d"
   integrity sha512-B7m0JszOGy5uZ4EzW3ykavSWGRP+iX8vGjjSBNK9duQF+LlH9EjAENcqAc4bBw8elzBWXpIR0FnQmGXIs3Om+g==

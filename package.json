@@ -5,14 +5,17 @@
   "repository": "https://github.com/microsoft/lading.git",
   "author": "Ken Chau <kchau@microsoft.com>, JD Huntington <jdh@microsoft.com>",
   "license": "MIT",
-  "dependencies": {
-    "lage": "^0.27.0",
-    "beachball": "^1.49.0"
-  },
   "private": true,
   "workspaces": {
     "packages": [
       "packages/*"
     ]
+  },
+  "scripts": {
+    "lage": "lage"
+  },
+  "devDependencies": {
+    "beachball": "1.49.0",
+    "lage": "0.27.0"
   }
 }
