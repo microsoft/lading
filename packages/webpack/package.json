@@ -1,0 +1,15 @@
+{
+  "name": "@lading/webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.16.0"
+  },
+  "peerDependencies": {
+    "webpack": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

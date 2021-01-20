@@ -1,0 +1,9 @@
+{
+  "name": "@lading/client",
+  "version": "1.0.0",
+  "module": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
