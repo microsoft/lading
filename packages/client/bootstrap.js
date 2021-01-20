@@ -21,10 +21,22 @@ export function bootstrap(server, app) {
   return fetch(manifestUrl)
     .then((res) => res.json())
     .then((manifest) => {
-      if (override) {
-        manifest = { ...manifest, ...override };
+      if (!manifest.packages) {
+        throw new Error(
+          `Fetched manifest is not of the correct format. ${manifest}`
+        );
       }
 
-      window.__LADING_MANIFEST__ = manifest;
+      let formattedManifest = {};
+
+      for (const packageInfo of manifest.packages) {
+        formattedManifest[packageInfo["package"]] = packageInfo.url;
+      }
+
+      if (override) {
+        formattedManifest = { ...formattedManifest, ...override };
+      }
+
+      window.__LADING_MANIFEST__ = formattedManifest;
     });
 }
