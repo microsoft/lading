@@ -16,7 +16,10 @@
     "test": "lage test",
     "lint": "lage lint",
     "start": "lage start",
-    "lage": "lage"
+    "lage": "lage",
+    "checkchange": "beachball checkchange",
+    "release": "beachball publish -y",
+    "change": "beachball change"
   },
   "devDependencies": {
     "beachball": "1.49.0",
