@@ -4,7 +4,7 @@
   "private": true,
   "description": "",
   "scripts": {
-    "build": "yarn tsc && babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline && cp ./src/config/typeorm/default.config.json ./dist/config/typeorm",
+    "build": "yarn tsc && babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline && cpx ./src/config/typeorm/default.config.json ./dist/config/typeorm",
     "tsc": "tsc --project tsconfig.compile.json",
     "tsc:w": "tsc --project tsconfig.json -w",
     "start": "nodemon --watch \"src/**/*.ts\" --ignore \"node_modules/**/*\" --exec babel-node --extensions .ts src/index.ts",
@@ -77,6 +77,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-typescript-metadata": "^0.3.1",
     "concurrently": "^5.3.0",
+    "cpx": "^1.5.0",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.1",

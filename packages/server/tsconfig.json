@@ -23,9 +23,6 @@
       "es7",
       "dom",
       "esnext.asynciterable"
-    ],
-    "typeRoots": [
-      "./node_modules/@types"
     ]
   },
   "include": [
