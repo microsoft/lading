@@ -1,0 +1,24 @@
+{
+  "name": "default",
+  "type": "mssql",
+  "host": "localhost",
+  "username": "sa",
+  "password": "PlaceholderPassword1",
+  "database": "lading",
+  "synchronize": true,
+  "logging": false,
+  "entities": [
+      "${rootDir}/entity/**/*.ts",
+      "${rootDir}/entity/**/*.js"
+  ],
+  "migrations": [
+      "${rootDir}/migration/**/*.ts",
+      "${rootDir}/migration/**/*.js"
+  ],
+  "subscribers": [],
+  "cli": {
+    "entitiesDir": "${rootDir}/entity",
+    "migrationsDir": "${rootDir}/migration",
+    "subscribersDir": "${rootDir}/subscriber"
+  }
+}

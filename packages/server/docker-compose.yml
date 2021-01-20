@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    image: 'lading/server:latest'
+    ports:
+      - '8081:8081'
+    stdin_open: true
+    tty: true
+  mssql:
+    image: 'mcr.microsoft.com/mssql/server:2017-latest'
+    command: start --insecure
+    ports:
+      - '1433:1433'
+    environment:
+      SA_PASSWORD: Admin12345
+      ACCEPT_EULA: 'Y'

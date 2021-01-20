@@ -1,0 +1,28 @@
+<%- include('../_header', { title: record.humanFriendlyName }); %>
+    <div>
+        <h1 class="font-bold text-2xl"><%= record.humanFriendlyName %></h1>
+        <form method="POST" action="/rest/packages/<%= record.id %>/versions">
+        <table class="table-auto mt-4">
+            <tr>
+                <th>Version</th>
+                <th>CDN URL</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" name="version" class="rounded border py-2 px-3 text-grey-900 focus:outline-none focus:border-indigo-300" /></td>
+                <td><input type="text" name="cdnUrl" class="rounded border py-2 px-3 text-grey-900 focus:outline-none focus:border-indigo-300" /></td>
+                <td><input type="submit" value="Add version" class="rounded bg-indigo-200 hover:bg-indigo-300 text-black p-2" /></td>
+            </tr>
+            <% record.versions.forEach(version => { %>
+                <tr>
+                    <td><%= version.version %></td>
+                    <td><%= version.cdnUrl %></td>
+                </tr>
+            <% }) %>
+        </table>
+    </form>
+
+    </div>
+
+    
+<%- include('../_footer'); %>

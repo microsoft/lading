@@ -1,0 +1,14 @@
+<%- include('_header'); %>
+    <div>
+    
+        <ul>
+            <% docs.forEach((doc) => { %>
+
+                <li><a href="<%= doc.path %>"><span>OpenSpec <%= doc.specVersion %></span></a></li>
+
+            <% }) %>
+        </ul>
+    </div>
+</div>
+<!-- built files will be auto injected -->
+<%- include('_footer'); %>

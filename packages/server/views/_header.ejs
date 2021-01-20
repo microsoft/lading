@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title><%= title %> | Lading</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="flex h-screen antialiased text-gray-800">
+        <div class="flex flex-row h-full w-full overflow-x-hidden">
+            <div class="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
+                <%- include('./_logo'); %>
+                <div class="mt-20">
+                    <ul>
+                        <li><a href="/rest/packages" class="text-indigo-700 hover:text-blue-800 hover:underline">Packages</a></li>
+                        <li><a href="/rest/manifests" class="text-indigo-700 hover:text-blue-800 hover:underline">Manifests</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col flex-auto h-full p-6">

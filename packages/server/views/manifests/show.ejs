@@ -1,0 +1,31 @@
+<%- include('../_header', { title: record.humanFriendlyName }); %>
+    <div>
+        <h1 class="font-bold text-2xl"><%= record.humanFriendlyName %></h1>
+        <form method="POST" action="/rest/manifests/<%= record.id %>/packages">
+        <table class="table-auto mt-4">
+            <tr>
+                <th>Package</th>
+                <th>Version</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" name="package" class="rounded border py-2 px-3 text-grey-900 focus:outline-none focus:border-indigo-300" /></td>
+                <td><input type="text" name="version" class="rounded border py-2 px-3 text-grey-900 focus:outline-none focus:border-indigo-300" /></td>
+                <td><input type="submit" value="Add package" class="rounded bg-indigo-200 hover:bg-indigo-300 text-black p-2" /></td>
+            </tr>
+            <% record.manifestVersions.forEach(manifestVersion => { %>
+                <tr>
+                    <td><%= manifestVersion.humanFriendlyName %></td>
+                    <td><%= manifestVersion.humanFriendlyVersion %></td>
+                </tr>
+            <% }) %>
+        </table>
+    </form>
+
+    <p>Payload available at <a class="underline bg-indigo-200 hover:bg-indigo-300" href="/rest/manifest/<%= record.name %>">/rest/manifest/<%= record.name %></a></p>
+    <pre><%= JSON.stringify(record.payload, null, 2) %></pre>
+
+    </div>
+
+    
+<%- include('../_footer'); %>
