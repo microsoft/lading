@@ -3,6 +3,7 @@ module.exports = {
     build: ["^build"],
     test: ["build"],
     lint: [],
+    start: [],
   },
   npmClient: "yarn",
 };

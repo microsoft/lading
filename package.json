@@ -12,6 +12,10 @@
     ]
   },
   "scripts": {
+    "build": "lage build",
+    "test": "lage test",
+    "lint": "lage lint",
+    "start": "lage start",
     "lage": "lage"
   },
   "devDependencies": {
