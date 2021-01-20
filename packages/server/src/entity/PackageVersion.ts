@@ -1,5 +1,11 @@
-import { Maximum, MaxLength, Minimum, Property, Required } from "@tsed/schema";
-import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { MaxLength, Property, Required } from "@tsed/schema";
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 import { ManifestVersion } from "./ManifestVersion";
 import { Package } from "./Package";
 
@@ -24,7 +30,7 @@ export class PackageVersion {
 
   @OneToMany(() => ManifestVersion, (mv) => mv.packageVersion)
   manifestVersions: ManifestVersion[];
-  
+
   get packageName(): string | undefined {
     return this.package?.name;
   }

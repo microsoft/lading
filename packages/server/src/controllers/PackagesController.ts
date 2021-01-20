@@ -1,12 +1,10 @@
-import {BodyParams, Controller, Get, Post} from "@tsed/common";
-import {Package} from "../entity/Package";
+import { Controller, Get } from "@tsed/common";
+import { Package } from "../entity/Package";
 import { PackageRepository } from "../repositories/PackageRepository";
-import {PackageService} from "../services/PackageService";
 
 @Controller("/api/packages")
 export class PackagesController {
-  constructor(private packageRepository: PackageRepository) {
-  }
+  constructor(private packageRepository: PackageRepository) {}
 
   /*@Post("/")
   create(@BodyParams() package: Package): Promise<Package> {
@@ -14,7 +12,7 @@ export class PackagesController {
   }*/
 
   @Get("/")
-  getList(): Promise<Package[]> {
+  getList() {
     return this.packageRepository.find();
   }
 }

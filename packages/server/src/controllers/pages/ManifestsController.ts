@@ -3,20 +3,18 @@ import {
   Controller,
   Get,
   Post,
-  HeaderParams,
   PathParams,
   BodyParams,
   View,
-  Redirect,
   Context,
 } from "@tsed/common";
 import { Hidden, SwaggerSettings } from "@tsed/swagger";
 import { Returns } from "@tsed/schema";
 import { PackageRepository } from "../../repositories/PackageRepository";
-import { Package } from "../../entity/Package";
-import { PackageVersionRepository } from "../../repositories/PackageVersionRepository";
-import { PackageVersion } from "../../entity/PackageVersion";
-import { ManifestRepository, ManifestVersionRepository } from "../../repositories/ManifestRepository";
+import {
+  ManifestRepository,
+  ManifestVersionRepository,
+} from "../../repositories/ManifestRepository";
 import { Manifest } from "../../entity/Manifest";
 import { ManifestVersion } from "../../entity/ManifestVersion";
 
@@ -26,7 +24,11 @@ export class ManifestsController {
   @Constant("swagger")
   swagger: SwaggerSettings[];
 
-  constructor(private manifestRepository: ManifestRepository, private packageRepository: PackageRepository, private manifestVersionRepository: ManifestVersionRepository) {}
+  constructor(
+    private manifestRepository: ManifestRepository,
+    private packageRepository: PackageRepository,
+    private manifestVersionRepository: ManifestVersionRepository
+  ) {}
 
   @Get("/")
   @View("manifests/index.ejs")
@@ -49,20 +51,36 @@ export class ManifestsController {
   @View("manifests/show.ejs")
   @(Returns(200, String).ContentType("text/html"))
   async show(@PathParams("manifestId") manifestId: string) {
-    const record = await this.manifestRepository.greedyFind(parseInt(manifestId, 10));
+    const record = await this.manifestRepository.greedyFind(
+      parseInt(manifestId, 10)
+    );
     return {
       record,
     };
   }
 
   @Post("/:manifestId/packages")
-  async createVersion(@PathParams("manifestId") manifestId: string, @BodyParams() payload: any, @Context() ctx: Context) {
-    const packageRecord = await this.packageRepository.findOne({ name: payload.package }, { relations: ['versions'] });
-    const manifest = await this.manifestRepository.greedyFind(parseInt(manifestId, 10));
+  async createVersion(
+    @PathParams("manifestId") manifestId: string,
+    @BodyParams() payload: any,
+    @Context() ctx: Context
+  ) {
+    const packageRecord = await this.packageRepository.findOne(
+      { name: payload.package },
+      { relations: ["versions"] }
+    );
+    const manifest = await this.manifestRepository.greedyFind(
+      parseInt(manifestId, 10)
+    );
     if (packageRecord && manifest) {
-      const packageVersion = packageRecord.versions.find(v => v.version === payload.version);
+      const packageVersion = packageRecord.versions.find(
+        (v) => v.version === payload.version
+      );
       if (packageVersion) {
-        const manifestVersion = manifest.manifestVersions.find(mv => mv.packageName === payload.package) || new ManifestVersion();
+        const manifestVersion =
+          manifest.manifestVersions.find(
+            (mv) => mv.packageName === payload.package
+          ) || new ManifestVersion();
         manifestVersion.packageVersion = packageVersion;
         manifestVersion.manifest = manifest;
         await this.manifestVersionRepository.save(manifestVersion);
