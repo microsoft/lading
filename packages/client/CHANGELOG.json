@@ -2,6 +2,21 @@
   "name": "@lading/client",
   "entries": [
     {
+      "date": "Thu, 21 Jan 2021 17:39:31 GMT",
+      "tag": "@lading/client_v1.2.0",
+      "version": "1.2.0",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Uses \"globalVarName\" from manifest service",
+            "author": "kchau@microsoft.com",
+            "commit": "7a5c58b4be87f1d26294764f8599c4dc90e1072b",
+            "package": "@lading/client"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 21 Jan 2021 00:40:19 GMT",
       "tag": "@lading/client_v1.1.0",
       "version": "1.1.0",
