@@ -27,6 +27,7 @@ export class ManifestVersion {
       return {
         package: this.packageVersion?.packageName,
         version: this.packageVersion?.version,
+        globalVarName: this.packageVersion?.globalVarName,
         url: this.packageVersion?.cdnUrl,
       };
     }
