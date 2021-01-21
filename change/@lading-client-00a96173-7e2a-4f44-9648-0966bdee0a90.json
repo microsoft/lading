@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "update rest api endpoint url",
+  "packageName": "@lading/client",
+  "email": "kchau@microsoft.com",
+  "dependentChangeType": "patch"
+}
