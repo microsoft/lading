@@ -30,6 +30,8 @@ jobs:
 
       - run: yarn
 
+      - run: yarn workspace @lading/server build
+
       - run: yarn workspace @lading/server test
 
       - name: 'Login via Azure CLI'
