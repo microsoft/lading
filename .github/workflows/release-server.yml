@@ -39,12 +39,15 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: "Build and push image"
+      - name: "Docker login"
         uses: azure/docker-login@v1
         with:
           login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
-      - run: |
+
+      - name: "Docker build and push image"
+        working-directory: packages/server
+        run: |
           docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/lading:${{ github.sha }} -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/lading:latest
           docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/lading
