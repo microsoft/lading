@@ -3,7 +3,7 @@ import querystring from "querystring";
 export function bootstrap(server, app) {
   const search = querystring.parse(location.search.slice(1));
 
-  let manifestUrl = `${server}/m/${app}`;
+  let manifestUrl = `${server}/rest/manifest/${app}`;
   let override = {};
 
   if (search.ring) {
