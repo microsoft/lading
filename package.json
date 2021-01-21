@@ -17,9 +17,9 @@
     "lint": "lage lint",
     "start": "lage start",
     "lage": "lage",
-    "checkchange": "beachball checkchange",
-    "release": "beachball publish -y",
-    "change": "beachball change"
+    "checkchange": "beachball check --branch origin/main",
+    "release": "beachball publish --branch origin/main",
+    "change": "beachball change --branch origin/main"
   },
   "devDependencies": {
     "beachball": "1.49.0",
