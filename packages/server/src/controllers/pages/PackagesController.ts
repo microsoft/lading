@@ -51,6 +51,7 @@ export class PackagesController {
     const packageVersion = new PackageVersion();
     packageVersion.version = payload.version;
     packageVersion.cdnUrl = payload.cdnUrl;
+    packageVersion.globalVarName = payload.globalVarName;
     if (record) {
       packageVersion.package = record;
     }

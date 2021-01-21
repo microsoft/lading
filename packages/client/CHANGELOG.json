@@ -2,6 +2,21 @@
   "name": "@lading/client",
   "entries": [
     {
+      "date": "Thu, 21 Jan 2021 00:40:19 GMT",
+      "tag": "@lading/client_v1.1.0",
+      "version": "1.1.0",
+      "comments": {
+        "minor": [
+          {
+            "comment": "update rest api endpoint url",
+            "author": "kchau@microsoft.com",
+            "commit": "2b3ec3a7b242d825b10c23e730515bdbc75e8278",
+            "package": "@lading/client"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 21 Jan 2021 00:21:51 GMT",
       "tag": "@lading/client_v1.0.2",
       "version": "1.0.2",

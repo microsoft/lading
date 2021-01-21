@@ -25,6 +25,11 @@ export class PackageVersion {
   @Required()
   cdnUrl: string;
 
+  @Column({ default: ""})
+  @MaxLength(1024)
+  @Required()
+  globalVarName: string;
+
   @ManyToOne(() => Package, (packageEntity) => packageEntity.versions)
   package: Package;
 
