@@ -1,0 +1,20 @@
+{
+  "name": "@lading/webpack",
+  "entries": [
+    {
+      "date": "Thu, 21 Jan 2021 00:21:51 GMT",
+      "tag": "@lading/webpack_v1.0.2",
+      "version": "1.0.2",
+      "comments": {
+        "patch": [
+          {
+            "comment": "initial publish",
+            "author": "kchau@microsoft.com",
+            "commit": "1c840576b52786089f56ee5f42b8eebefe335796",
+            "package": "@lading/webpack"
+          }
+        ]
+      }
+    }
+  ]
+}

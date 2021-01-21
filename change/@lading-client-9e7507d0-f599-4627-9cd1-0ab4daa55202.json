@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "initial publish",
-  "packageName": "@lading/client",
-  "email": "kchau@microsoft.com",
-  "dependentChangeType": "patch"
-}
