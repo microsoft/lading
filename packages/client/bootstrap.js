@@ -30,7 +30,7 @@ export function bootstrap(server, app) {
       let formattedManifest = {};
 
       for (const packageInfo of manifest.packages) {
-        formattedManifest[packageInfo["package"]] = packageInfo.url;
+        formattedManifest[packageInfo["globalVarName"]] = packageInfo.url;
       }
 
       if (override) {
