@@ -2,6 +2,21 @@
   "name": "@lading/client",
   "entries": [
     {
+      "date": "Tue, 26 Jan 2021 20:32:14 GMT",
+      "tag": "@lading/client_v1.2.1",
+      "version": "1.2.1",
+      "comments": {
+        "patch": [
+          {
+            "comment": "adds typing information for @lading/client",
+            "author": "kchau@microsoft.com",
+            "commit": "d63ec18e725b4fbe272fbb57411994fe1feb74d7",
+            "package": "@lading/client"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 21 Jan 2021 17:39:31 GMT",
       "tag": "@lading/client_v1.2.0",
       "version": "1.2.0",

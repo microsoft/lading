@@ -1,0 +1,20 @@
+{
+  "name": "@lading/example",
+  "entries": [
+    {
+      "date": "Tue, 26 Jan 2021 20:32:14 GMT",
+      "tag": "@lading/example_v1.0.0",
+      "version": "1.0.0",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Bump @lading/client to v1.2.1",
+            "author": "kchau@microsoft.com",
+            "commit": "d63ec18e725b4fbe272fbb57411994fe1feb74d7",
+            "package": "@lading/example"
+          }
+        ]
+      }
+    }
+  ]
+}

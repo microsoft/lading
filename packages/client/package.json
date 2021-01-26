@@ -1,6 +1,6 @@
 {
   "name": "@lading/client",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "module": "index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
