@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "adds typing information for @lading/client",
+  "packageName": "@lading/client",
+  "email": "kchau@microsoft.com",
+  "dependentChangeType": "patch"
+}

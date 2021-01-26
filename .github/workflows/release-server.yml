@@ -46,8 +46,8 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
+      # TODO: docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/lading
       - name: "Docker build and push image"
         working-directory: packages/server
         run: |
           docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/lading:${{ github.sha }} -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/lading:latest
-          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/lading
