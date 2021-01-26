@@ -2,7 +2,7 @@
   "name": "@lading/client",
   "version": "1.2.0",
   "module": "index.js",
-  "types": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "build": "tsc"
