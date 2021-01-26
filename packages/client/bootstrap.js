@@ -1,5 +1,10 @@
 import querystring from "querystring";
 
+/**
+ * bootstraps the lading federated bundle location
+ * @param {string} server the lading server url (e.g. https://lading-app.azurewebsites.net)
+ * @param {string} app the application registered (the name of the manifest)
+ */
 export function bootstrap(server, app) {
   const search = querystring.parse(location.search.slice(1));
 
