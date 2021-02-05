@@ -30,6 +30,9 @@ export class PackageVersion {
   @Required()
   globalVarName: string;
 
+  @Column("simple-json", {nullable: true})
+  metadata: any;
+
   @ManyToOne(() => Package, (packageEntity) => packageEntity.versions)
   package: Package;
 

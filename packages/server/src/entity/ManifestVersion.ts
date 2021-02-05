@@ -29,6 +29,7 @@ export class ManifestVersion {
         version: this.packageVersion?.version,
         globalVarName: this.packageVersion?.globalVarName,
         url: this.packageVersion?.cdnUrl,
+        metadata: this.packageVersion?.metadata,
       };
     }
   }

@@ -52,6 +52,7 @@ export class PackagesController {
     packageVersion.version = payload.version;
     packageVersion.cdnUrl = payload.cdnUrl;
     packageVersion.globalVarName = payload.globalVarName;
+    packageVersion.metadata = payload.metadata ? JSON.parse(payload.metadata) : {};
     if (record) {
       packageVersion.package = record;
     }
