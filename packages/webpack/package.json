@@ -6,6 +6,11 @@
   "devDependencies": {
     "webpack": "^5.16.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/lading.git",
+    "directory":"packages/webpack"
+  },
   "peerDependencies": {
     "webpack": "^5.0.0"
   },
