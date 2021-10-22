@@ -18,6 +18,11 @@
     "test:lint:fix": "eslint src --ext .ts --fix",
     "typeorm": "tsed typeorm"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/lading.git",
+    "directory":"packages/server"
+  },
   "dependencies": {
     "@tsed/ajv": "^6.21.0",
     "@tsed/common": "^6.21.0",
